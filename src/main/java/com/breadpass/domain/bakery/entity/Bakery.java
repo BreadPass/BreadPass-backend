@@ -1,4 +1,4 @@
-package com.breadpass.domain.bakery;
+package com.breadpass.domain.bakery.entity;
 
 import com.breadpass.domain.auditing.entity.BaseTimeEntity;
 import com.breadpass.domain.common.PlaceInfo;
