@@ -27,4 +27,18 @@ public class Bakery extends BaseTimeEntity {
     @Builder.Default
     private Boolean deleted = false;
 
+    //business logic
+    public static Bakery createBakery(PlaceInfo placeInfo, ReviewInfo reviewInfo) {
+        return Bakery.builder()
+                .placeInfo(placeInfo)
+                .reviewInfo(reviewInfo)
+                .build();
+    }
+
+    public void delete() {
+        if (deleted) {
+            throw new IllegalStateException("Bakery is already deleted.");
+        }
+        this.deleted = true;
+    }
 }

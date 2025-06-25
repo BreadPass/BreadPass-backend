@@ -8,6 +8,11 @@ import lombok.Getter;
 @Builder
 @Embeddable
 public class ReviewInfo {
+
+    @Builder.Default
     private Double rating = 0.0;
+
+    @Builder.Default
     private Integer reviewCount = 0;
+
 }
