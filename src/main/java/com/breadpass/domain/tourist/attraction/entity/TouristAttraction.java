@@ -6,12 +6,14 @@ import com.breadpass.domain.common.ReviewInfo;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.SQLRestriction;
 
 @Getter
 @Entity
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@SQLRestriction("deleted = false")
 public class TouristAttraction extends BaseTimeEntity {
 
     @Id
